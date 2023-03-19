@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import {Box, Container} from "@mui/material";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import MainScreen from "./Components/Content/MainScreen/MainScreen";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Box className={'border-x-gray-50'}>
+            <Header />
+            <Container maxWidth="xl" sx={{minHeight: '100vh'}} className={'border-l border-r'}>
+                <Box sx={{paddingTop: 18}}>
+                    <MainScreen />
+                </Box>
+            </Container>
+            <Footer />
+        </Box>
+    );
 }
 
 export default App;
